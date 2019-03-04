@@ -1,0 +1,7 @@
+- hosts: web
+  roles:
+    - { role: apache, become: yes }
+
+- hosts: haproxy
+  roles:
+    - { role: haproxy, become: yes }

@@ -1,0 +1,6 @@
+    - name: Removing haproxy load balancer
+      apt: pkg=haproxy state=absent
+
+    - name: Removing haproxy folder
+      file:
+        path: /etc/haproxy

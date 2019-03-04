@@ -5,10 +5,10 @@ Based on this article: https://habr.com/ru/post/305400/
 
 Reqired:
 1) Ansible installed on the control host.
-sudo apt-get update
-sudo apt-get install software-properties-common
-sudo apt-add-repository --yes --update ppa:ansible/ansible
-sudo apt-get install ansible
+  sudo apt-get update
+  sudo apt-get install software-properties-common
+  sudo apt-add-repository --yes --update ppa:ansible/ansible
+  sudo apt-get install ansible
 2) Python 2.7 installed on target hosts (or you can use install-python2.yml).
 3) SSH key-based authentication to the target hosts has been configured.
 4) Edit hosts file to specify your web servers and load balancer hosts. Replace IP addresses and usernames with your own and/or add more hosts if necessary.

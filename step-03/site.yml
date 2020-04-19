@@ -1,9 +1,0 @@
-- hosts: web
-  gather_facts: no
-  roles:
-    - { role: apache, become: yes }
-
-- hosts: haproxy
-  gather_facts: no
-  roles:
-    - { role: haproxy, become: yes }

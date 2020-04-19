@@ -8,5 +8,6 @@
 
     - name: Sets default starting flag to 1
       lineinfile: dest=/etc/default/haproxy regexp="^ENABLED" line="ENABLED=1"
+      
       notify:
         - restart haproxy

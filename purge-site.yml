@@ -1,0 +1,14 @@
+- hosts: web
+  roles:
+    - role: apache
+      become: yes
+      action: purge
+      action_hint: "apache server purging"
+
+- hosts: haproxy
+  roles:
+    - role: haproxy
+      become: yes
+      action: purge
+      action_hint: "haproxy lb purging"
+  

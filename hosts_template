@@ -1,0 +1,9 @@
+[control_node]
+localhost ansible_connection=local
+
+[web]
+webserver1 ansible_ssh_host=<IP address> ansible_ssh_user={{username}} ansible_ssh_pass={{userpass}}
+webserver2 ansible_ssh_host=<IP address> ansible_ssh_user={{username}} ansible_ssh_pass={{userpass}}
+
+[haproxy]
+balancer ansible_ssh_host=<IP address> ansible_ssh_user={{username}} ansible_ssh_pass={{userpass}}

@@ -1,5 +1,3 @@
-- hosts: web
-  tasks:
     - name: Updates apt cache
       apt: update_cache=true
 
@@ -9,7 +7,7 @@
         state: latest
 
     - name: Push future default virtual host configuration
-      copy: src=files/awesome-app.conf dest=/etc/apache2/sites-available/ mode=0640
+      copy: src=awesome-app.conf dest=/etc/apache2/sites-available/ mode=0640
 
     - name: Activates our virtualhost
       command: a2ensite awesome-app
@@ -40,15 +38,6 @@
 
     - name: Deactivates the default ssl virtualhost
       command: a2dissite default-ssl
-
+      
       notify:
         - restart apache
-
-  handlers:
-    - name: restart apache
-      service: name=apache2 state=restarted
-
-  gather_facts: no
-  become: yes
-  become_user: root
-  become_method: sudo

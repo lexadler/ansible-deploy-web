@@ -1,0 +1,14 @@
+- hosts: web
+  roles:
+    - role: apache
+      become: yes
+      action: install
+      action_hint: "apache server installing"
+
+- hosts: haproxy
+  roles:
+    - role: haproxy
+      become: yes
+      action: install
+      action_hint: "haproxy lb installing"
+  

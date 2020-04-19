@@ -1,6 +1,0 @@
-[web]
-webserver1 ansible_ssh_host=192.168.0.4 ansible_ssh_user=user
-webserver2 ansible_ssh_host=192.168.0.5 ansible_ssh_user=user
-
-[haproxy]
-balancer ansible_ssh_host=192.168.0.6 ansible_ssh_user=user

@@ -1,0 +1,14 @@
+- name: Removing apache2
+  apt:
+    pkg: ['apache2', 'libapache2-mod-php']
+    state: absent
+
+- name: Deleting apache2 folder
+  file:
+    path: /etc/apache2
+    state: absent
+
+- name: Removing our awesome application
+  file:
+    path: /var/www/awesome-app
+    state: absent

@@ -11,6 +11,6 @@ Ansible playbooks that allow you to deploy a simple web app with apache2 web ser
 ## Rollback:
 1) Run purge tasks with command `docker run --rm --network=host -it -v $(pwd)/log:/log ansible purge-site.yml -e '{"username":<username>,"userpass":<password>}'`
 
-*Notes*:
-You can specify modified `hosts` file without rebuilding docker image by adding mount with `-v $(pwd)/hosts:/ansible/hosts` to `docker run` command.
-You can also specify another web app by editing `roles/apache/tasks/install.yml`. The app repo defined with the string: `git: repo=<some repo URL> dest=/var/www/awesome-app`
+### Notes:
+1) You can specify modified `hosts` file without rebuilding docker image by adding mount with `-v $(pwd)/hosts:/ansible/hosts` to `docker run` command.
+2) You can also specify another web app by editing `roles/apache/tasks/install.yml`. The app repo defined with the string: `git: repo=<some repo URL> dest=/var/www/awesome-app`
